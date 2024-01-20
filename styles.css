@@ -1,0 +1,685 @@
+:root{
+    --green:green;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 0.4rem 0 rgb(0, 120, 0);
+    --border:2 rem solid rgba(0,0,0.1);
+    --outline:.1 rem solid rgba(0,0,0.1);
+}
+*{
+    font-family:'poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+   scroll-padding-top:7rem; 
+}
+body{
+    background: #eee;
+}
+/*css code for banner*/
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: black;
+
+}
+.heading span{
+    background-color: green;
+    color: white;
+    padding: 1rem;
+}
+.header{
+    position: sticky;
+    top:0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%; 
+    /* here 8% means 80px due to viewport width is 1000*/
+    background:#fff;
+box-shadow:0 0.3rem 0 rgba(0,120,0);
+}
+.header .logo{
+    font-size: 2.5rem;
+    font-family: bolder;
+}
+.header .logo i{
+   color:var(--green);
+   
+}
+.header .nav-bar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+.header .nav-bar a:hover{
+    color:green;
+    font-size: 2.2rem;
+    
+}
+.header .icons button{
+    height:4.5rem;
+    width: 4.5rem;
+cursor: pointer;
+border-radius: .9rem;
+}
+.header .icons button:hover{
+    background-color: green;
+    height:5rem;
+    width: 5rem;
+}
+#menu-btn{
+    display: none;
+}
+.btn{
+    border: 2px solid black;
+padding: 2rem;
+font-size: 1.5rem;
+padding: .8rem 3rem;
+cursor: pointer;
+color: black;
+margin-top: 2rem;
+border-radius: 5rem;
+background: none;
+}
+.btn:hover{
+    background-color: green;
+    color: white;
+}
+.header .search-form{
+    position: absolute;
+    top:110%;
+   right: -110%;
+   width: 50rem;
+   height: 4.5rem;
+   background-color: white;
+   display: flex;
+   align-items: center;
+   border-radius: 1rem;
+   box-shadow:0 .4rem 0  rgba(0,120,0);
+}
+.header .search-form input{
+   height: 100%;
+   width: 100%;
+   background: none;
+   padding: 1.5rem;
+font-size: 1.8rem;
+color:green;
+}
+.header .search-form label{
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: black;
+    cursor: pointer;
+}
+.header .search-form label:hover{
+    color: green;
+}
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart{
+    border: 2px solid black;
+    position: absolute;
+    top:105%;
+    right:-110%;
+    border-radius: 1rem;
+    box-shadow:.5rem .5rem  0.5rem 0.5rem rgba(0,120,0);
+    width:30rem;
+    background: #fff;
+    height: 39.5rem;
+}
+.header .shopping-cart .box{
+   display: flex;
+   align-items: center;
+}
+.header .shopping-cart .box img{
+    height:10rem;
+}
+.header .shopping-cart .box i{
+    font-size: 2rem;
+    position: relative;
+    right:-25rem;
+    cursor: pointer;
+    color: lightgreen;
+}
+.header .shopping-cart .box i:hover{
+    color: red;
+}
+.header .shopping-cart .total{
+    font-size: 1.5rem;
+    bottom: 2rem;
+    right: 20rem;
+}
+.header .shopping-cart .box .content h3{
+    color: black;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+.header .shopping-cart .box .content span{
+    font-size: 1.5rem;
+    color:grey;
+padding: 0 .8rem;
+}
+.header .shopping-cart .total{
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    columns: black;
+}
+.header .shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart .btn{
+display: block;
+text-align: center;
+margin: 1rem;
+}
+.header .login-form{
+    border: 0px solid black;
+    position: absolute;
+    top: 105%;
+    right:-110%;
+    box-shadow: 0.2rem .3rem .5rem rgba(0,120,0);
+    padding: 1.5rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    font-size:1.5rem;
+    
+}
+.header .login-form h3{
+    font-size: 2.5rem;
+    color: black;
+}
+.header .login-form .box{
+    margin: 3px;
+    border-radius: .5rem;
+    background: #eee;
+    padding: 1rem;
+width: 95%;
+}
+.header .login-form  div {
+   padding: .5rem;
+   font-size: 1.7rem;
+}
+.header .login-form  div a{
+    text-decoration: underline;
+    color: green;
+}
+.header .login-form.active{
+    right:1rem;
+transition: .3s linear;
+}
+
+.home{
+    
+    display: flex;
+    justify-content: center;
+    background:url(../images/banner-img.jpg) no-repeat ;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-size:cover;
+background-attachment:scroll;
+
+}
+.home .content{
+   text-align: center;
+   color:blue;
+}
+.home .content h3{
+    font-size:2.5rem;
+    padding: 1rem;
+}
+.home .content p{
+    font-size: 1.3rem;
+    padding: 2rem;
+}
+.home .content button{
+    width: 50%;
+}
+.home .content span{
+    color: green;
+    font-size: 3rem;
+}
+.features{
+    width: 85%;
+    margin: 0 auto;
+}
+.features .box-container{
+    border:0px solid;
+    display: grid;
+    grid-template-columns:4fr 4fr 4fr;
+    gap: 1.5rem;
+    
+}
+.features .box-container .box{
+    border: 0px solid red;
+    padding: 3rem 2rem;
+    background-color: white;
+    outline:1 rem solid rgba(0,0,0.1);
+    outline-offset:-3rem;
+    text-align: center;
+    margin-right: 0 2rem 0 0rem;
+    
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,0.9);
+}
+    
+.features .box-container .box:hover{
+box-shadow: 1px 2px 10px 4px green;
+
+}
+.features .box-container .box img{
+    margin: 1rem 0;
+    height:15rem;
+    padding: 0 4rem;
+}
+.features .box-container .box h3{
+font-size: 2.5rem;
+line-height: 1.5rem;
+color: black;
+}
+.features .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem;
+}
+.products .h1{
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: blue;
+    
+    padding:1rem;
+    font-size: 2.4rem;
+    width:200px;
+    background-color: lightgreen;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* start from here */  
+
+
+
+
+.products .product-slider .box .stars i{
+    color:darkorange;
+    font-size: 1.7rem;
+    padding: .5rem 0;
+    margin-top: 20px;
+}
+
+.products .product-slider{
+    border: 0px solid;
+    padding: 1rem;
+}
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+}
+.products .product-slider .box{
+    border:2px solid green;
+    width:200px;
+    transition: transform 0.3s ease-in-out;
+    margin: 1rem;
+    padding:3rem 2rem;
+    background-color: white;
+    border-radius: .5rem;
+    text-align: center;
+    outline-offset:-1rem;
+    outline:yellow;
+    transition: ease-in-out;
+    box-shadow: var(--box-shadow);
+ 
+}
+.products .product-slider .wrapper{
+    display: flex;
+    padding:2rem;
+}
+.products .product-slider .box:hover{
+    box-shadow: 1px 2px 10px 4px green;
+    transform: scale(1.1);  
+}
+.products .product-slider .box img{
+height: 20rem;
+}
+.products .product-slider .box h1{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.products .product-slider .box .btn {
+    display: inline-block; /* Make the button inline-block to prevent combining */
+    margin-top: 10px; /* Add some top margin to separate from stars */
+    padding: .8rem 3rem;
+    cursor: pointer;
+    color: black;
+    border-radius: 5rem;
+    background-color:none;
+}
+.products .product-slider .box .btn:hover{
+    background-color: green;
+    color: white;
+}
+.products .product-slider .box .price{
+    font-size: 2rem;
+    color: var(--light-color);
+    padding: .5rem 0;
+}
+/*categories start from here*/
+.categories h1{
+    font-size: 2.4rem;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5rem;
+
+}
+.categories h1 span{
+    font-family:monospace;
+    background-color: green;
+    padding:1.2rem;
+    color: white;
+    border-radius: 4rem;
+    
+}
+.categories h1 span:hover{
+transform: scale(2);
+background-color:cadetblue;
+cursor: pointer;
+}
+.categories .box{
+    border: 2px solid green;
+height:32rem;
+width:30rem;
+text-align: center;
+border-radius: 2rem;
+margin: 1rem;
+background-color: white;
+box-shadow: var(--box-shadow);
+}
+.categories .box:hover{
+    box-shadow: 1px 2px 10px 4px green;
+}
+.categories .box-container{
+    display: flex;
+    
+}
+.categories {
+    padding: 2rem;
+    
+}
+.categories .box-container .box .title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: .7rem;
+}
+.categories .box-container .box p{
+    font-size: 2rem;
+    color: var(--light-color);
+    margin:1rem;
+}
+.categories .box-container .box .btn{
+    margin-top: 1.5rem;
+}
+.categories .box-container .box img:hover{
+    transform: scale(1.3);
+}
+.review .box-details{
+    display:flex;
+}
+.review .h1{
+    font-size:2.5rem;
+    margin: 3rem;
+    background-color: green;
+    color:white;
+    margin:3rem 30rem 4rem;
+    text-align: center;
+    border:1px solid black;
+    border-radius: 3rem;
+}
+.review .box-details .box{
+    width:400px;
+    text-align: center;
+    border:2px solid green;
+    margin:2rem;
+    border-radius:2rem;
+    height:30rem;
+}
+.review .box-details .box img{
+    width:9rem;
+    margin: 2rem;
+    border-radius: 7rem;
+}
+.review .box-details .box .rating a{
+    color:orange;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.review .box-details .box p{
+    font-size: 1.1rem;
+    margin: 0 2rem ;
+    text-align: left;
+}
+.review .box-details .box h1{
+padding:1.5rem;
+}
+.review .box-details .box:hover{
+    box-shadow: 1px 2px 10px 4px green;
+    cursor: pointer;
+}
+
+
+
+
+
+.blogs .box-container .box{
+    width: 35rem;
+    text-align: center;
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 2rem;
+    margin: 0 1rem 0 0;
+}
+.blogs .box-container .box .content .icons{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.blogs .box-container .box .content .icons i{
+color: green;
+}
+.blogs .box-container .box:hover{
+    box-shadow: 1px 2px 10px 4px green;
+    cursor: pointer;
+}
+
+.blogs .box-container .box .content h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.blogs .box-container .box .content p{
+    font-size: 1.1rem;
+    color: var(--light-color);
+}
+.blogs .box-container .box .content .btn{
+    width: 10rem;
+    margin: 1rem 0 1rem 9rem;
+}
+.blogs .box-container .box img{
+    width:33rem;
+    border-radius: 1.5rem;    
+}
+.blogs .box-container{
+display: flex;
+    margin: 0 10rem 0 0;
+    margin-left: 0px;
+}
+
+
+.blogs .box-container .box .content h1{
+ margin-top: 3rem;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .nav-bar{
+        position: absolute;
+        top:110%;
+        right:-110%;
+width:30rem;
+box-shadow: .4rem .4rem .4rem rgba(0,120,0);
+border-radius: .5rem;
+background: white;
+    }/* Add this media query at the end of your CSS code */
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .header .nav-bar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 90%;
+        box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 120, 0);
+        border-radius: 0.5rem;
+        background: white;
+
+    }
+
+    .header .icons button {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .header .shopping-cart {
+        top: 105%;
+        right: -110%;
+        width: 100%;
+    }
+
+    .header .search-form,
+    .header .login-form {
+        right: -110%;
+        width: 100%;
+    }
+
+    .home .content {
+        width: 90%;
+    }
+
+    .features .box-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .products .product-slider .wrapper {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+
+    .categories .box-container {
+        display: grid;
+        margin-left: 5.5rem;
+    }
+
+    .blogs .box-container {
+        display: block; /* Change to block for a vertical layout */
+        margin-top: 10rem;
+
+    }
+    .blogs .box-container .box {
+        margin-top: 2rem;
+    }
+.review .box-details{
+    display: grid;
+}
+.review .box-details .box{
+    width:30rem;
+}
+.categories .box-container .box{
+    width:30rem;
+    height: 40rem;
+}
+
+    .blogs .box-container .box img {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    /* Additional styles for responsiveness can be added here */
+
+    .header .nav-bar a {
+        display: block;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+    .review .h1 {
+        font-size: 2.5rem;
+        margin: 3rem;
+        background-color: green;
+        color: white;
+        margin: 3rem auto 4rem; /* Centering the heading horizontally */
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 3rem;
+    }
+    
+
+    .header .search-form {
+        width: 90%;
+    }
+
+    .header .nav-bar.active {
+        right: 2rem;
+        transition: 0.3s linear;
+    }
+}
+
+/* Further adjustments for even smaller screens, e.g., mobile phones */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+}
